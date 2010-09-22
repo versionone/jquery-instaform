@@ -23,6 +23,7 @@ Installation
 1. Reference jquery.form.js
 1. Reference jquery.instaform.js
 1. $(function(){ $('#myform').instaform() })
+1. $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })
 
 User Usage
 --
@@ -31,7 +32,7 @@ User Usage
 
 Limitations
 --
-1. As of now only textarea and input:text fields are supported
+1. As of now only textarea and input:text fields have been tested
 
 Tests
 -- 
