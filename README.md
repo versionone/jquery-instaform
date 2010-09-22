@@ -23,8 +23,10 @@ Installation
 1. Reference jquery.form.js
 1. Reference jquery.instaform.js
 
+Example:
 
     $(function(){ $('#myform').instaform() })
+    
     $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })
 
 
