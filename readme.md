@@ -37,3 +37,7 @@ Limitations
 Tests
 -- 
 This plugin was built using [JSpec](http://visionmedia.github.com/jspec/). To run the specs navigate to the src/spec/dom.html file in Firefox (other browsers do not seem to work).
+
+License
+--
+Please refer to the LICENSE file.
