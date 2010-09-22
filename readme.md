@@ -40,4 +40,4 @@ This plugin was built using [JSpec](http://visionmedia.github.com/jspec/). To ru
 
 License
 --
-Please refer to the LICENSE file.
+Please refer to the [LICENSE](blob/master/LICENSE) file.
