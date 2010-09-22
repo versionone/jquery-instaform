@@ -33,6 +33,7 @@ Usage
 Limitations
 --
 1. As of now only textarea and input:text fields have been tested
+1. Known to work with the dependencies in the lib folder (namely jQuery 1.4.2). Earlier or later versions may also work.
 
 Tests
 -- 
