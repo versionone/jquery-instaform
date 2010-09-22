@@ -25,7 +25,7 @@ Installation
 1. $(function(){ $('#myform').instaform() })
 1. $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })
 
-User Usage
+Usage
 --
 1. Make a change to a text input inside of an instaform
 1. Leave the field or press enter
