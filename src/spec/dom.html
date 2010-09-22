@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+	<head>
+		<link type="text/css" rel="stylesheet" href="./lib/jspec.css" />
+		<link type="text/css" rel="stylesheet" href="../../Styles/jquery-ui-1.8.2.custom.css" />
+		<script src="../jquery-1.4.2.min.js" type="text/javascript"></script>
+		<script src="../jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script>
+		<script src="../jquery.validate.min.js" type="text/javascript"></script>
+		<script src="./lib/jspec.js" type="text/javascript"></script>
+		<script src="./lib/jspec.xhr.js" type="text/javascript"></script>
+		<script src="./lib/jspec.jquery.js" type="text/javascript"></script>
+		<script src="./lib/jspec.timers.js" type="text/javascript"></script>
+		
+		<!-- include your spec helper and link your library here -->
+		<script src="../jquery.form.js" type="text/javascript"></script>
+		<script src="../jquery.instaform.js" type="text/javascript"></script>
+		<script src="unit/instaform.spec.helper.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			function runSuites() {
+				JSpec // add an exec call for your each spec file here
+					.exec('unit/instaform.spec.js')
+					.run({ fixturePath: 'fixtures' })
+					.report()
+			}
+		</script>
+	</head>
+	<body class="jspec" onLoad="runSuites();">
+		<div id="jspec-top"><h2 id="jspec-title">JSpec <em><script>document.write(JSpec.version)</script></em></h2></div>
+		<div id="jspec"></div>
+		<div id="jspec-bottom"></div>
+	</body>
+</html>
