@@ -22,8 +22,9 @@ Installation
 1. Reference jquery-ui-1.8.2.custom.min
 1. Reference jquery.form.js
 1. Reference jquery.instaform.js
-1. $(function(){ $('#myform').instaform() })
-1. $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })
+
+ `$(function(){ $('#myform').instaform() })
+ $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })`
 
 Usage
 --
