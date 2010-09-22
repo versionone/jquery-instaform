@@ -7,7 +7,7 @@ When a user makes a change to any input field that has been set up to be an inst
 
 Users know if forms are instaforms by providing them with ui hints. jQuery UI classes are used to show 'ui-state-focus' while editing as well as 'ui-state-active' while submitting. If there is an error during submission the 'ui-state-error' class is added to the inputs.
 
-Instaform has integration with the [http://github.com/jzaefferer/jquery-validation](jQuery Validation plugin). If validation fails while attempting to submit, it will cancel. The validation plugin will handle display of offenses.
+Instaform has integration with the [jQuery Validation plugin](http://github.com/jzaefferer/jquery-validation). If validation fails while attempting to submit, it will cancel. The validation plugin will handle display of offenses.
 
 Options
 --
@@ -35,4 +35,4 @@ Limitations
 
 Tests
 -- 
-This plugin was built using [http://visionmedia.github.com/jspec/](JSpec). To run the specs navigate to the src/spec/dom.html file in Firefox (other browsers do not seem to work).
+This plugin was built using [JSpec](http://visionmedia.github.com/jspec/). To run the specs navigate to the src/spec/dom.html file in Firefox (other browsers do not seem to work).
