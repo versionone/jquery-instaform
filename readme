@@ -32,3 +32,7 @@ User Usage
 Limitations
 --
 1. As of now only textarea and input:text fields are supported
+
+Tests
+-- 
+This plugin was built using [http://visionmedia.github.com/jspec/](JSpec). To run the specs navigate to the src/spec/dom.html file in Firefox (other browsers do not seem to work).
