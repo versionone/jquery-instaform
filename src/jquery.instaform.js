@@ -1,3 +1,4 @@
+
 (function ($) {
 	$.InstaForm = function (el, options) {
 		// To avoid scope issues, use 'self' instead of 'this'
