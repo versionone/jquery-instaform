@@ -1,1 +1,8 @@
 # jquery-instaform.gems generated gem export file. Note that any env variable settings will be missing. Append these after using a ';' field separator
+bind -v0.2.8
+commander -v4.0.3
+highline -v1.6.1
+json_pure -v1.4.6
+jspec -v4.3.3
+rack -v1.2.1
+sinatra -v1.0
