@@ -1,3 +1,4 @@
+require 'zip/zip'
 require File.expand_path('../version', __FILE__)
 
 @build = File.expand_path('../build', __FILE__)
@@ -9,7 +10,9 @@ require File.expand_path('../version', __FILE__)
 
 task :default => :spec
 
-desc "Builds versioned InstaForm and minified Instaform"
+desc "Version, minify, and zip InstaForm for a release."
+task :release => [:clean, :min, :zip]
+
 task :min => [:dist] do
   min = `#{@minifier} --js #{File.join(@dist, @insta)} --warning_level QUIET`
 
@@ -24,6 +27,17 @@ task :dist => [:clean] do
 
   File.open(File.join(@dist, @insta), 'w') do |f|
     f.write add_header(source)
+  end
+end
+
+task :zip do
+  include Zip
+  zip_file = File.join(@dist, "jquery.instaform-#{InstaForm::VERSION::STRING}.zip")
+  ZipFile.open(zip_file, true) do |zip|
+    FileList["#{@dist}/*.js"].each do |path|
+      name = path.sub(@dist+'/', '')
+      zip.add(name, path)
+    end
   end
 end
 
