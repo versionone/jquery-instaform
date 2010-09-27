@@ -1,0 +1,8 @@
+rvm --create 1.9.2-head@jquery-instaform
+
+if [[ -s jquery-instaform.gems ]] ; then
+  if ! rvm gemset import jquery-instaform.gems >/dev/null 2>&1; then
+    echo "ERROR: Unable to bootstrap the gems" >&2
+  fi
+fi
+

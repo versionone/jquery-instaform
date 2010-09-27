@@ -1,4 +1,4 @@
-require './version'
+require File.expand_path('../version', __FILE__)
 
 @build = File.expand_path('../build', __FILE__)
 @dist = File.expand_path('../dist', __FILE__)
