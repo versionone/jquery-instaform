@@ -13,7 +13,8 @@ Options
 --
 - formClass - '' - in addition to adding 'ui-widget' to the form element, you may specify an additional class to add to forms set up to be instaforms
 - selector - 'input:text, textarea' - the selector used to bind event listeners to
-- success - function(){} - a callback function you may supply that is invoked after ajax success
+- beforeSubmit - function($form){} - a callback function you may supply that is invoked before the for is submitted
+- success - function(data, statusText, xhr, $form){} - a callback function you may supply that is invoked after ajax success
 
 Installation
 --
@@ -27,7 +28,7 @@ Example:
 
     $(function(){ $('#myform').instaform() })
     
-    $(function(){ $('#myform').instaform({ success : function() { alert('success') } }) })
+    $(function(){ $('#myform').instaform({ success : function(data, statusText, xhr, $form) { alert('success') } }) })
 
 
 Usage
