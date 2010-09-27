@@ -70,7 +70,7 @@ describe 'InstaForm : '
 			end
 			
 			after
-			  delete request
+			  //delete request
 			  unmock_request()
 			end
 			
@@ -103,7 +103,7 @@ describe 'InstaForm : '
 			end
 			
 			after
-				delete request
+				//delete request
 				unmock_request()
 			end
 			
@@ -125,7 +125,7 @@ describe 'InstaForm : '
 				end
 				
 				after
-					delete request
+					//delete request
 					unmock_request()
 				end
 				
