@@ -7,14 +7,7 @@ require './version'
 @insta = 'jquery.instaform.js'
 @insta_min = 'jquery.instaform.min.js'
 
-task :dist => [:clean] do
-  mkdir_p @dist
-  source = File.read(File.join(@src, @insta))
-
-  File.open(File.join(@dist, @insta), 'w') do |f|
-    f.write add_header(source)
-  end
-end
+task :default => :min
 
 desc "Builds versioned InstaForm and minified Instaform"
 task :min => [:dist] do
@@ -22,6 +15,15 @@ task :min => [:dist] do
 
   File.open(File.join(@dist, @insta_min), 'w') do |f|
     f.write add_header(min)
+  end
+end
+
+task :dist => [:clean] do
+  mkdir_p @dist
+  source = File.read(File.join(@src, @insta))
+
+  File.open(File.join(@dist, @insta), 'w') do |f|
+    f.write add_header(source)
   end
 end
 
