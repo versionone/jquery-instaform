@@ -33,6 +33,7 @@
 
 			var $instaInput = $(e.target);
 			$instaInput.addClass('ui-state-active');
+      self.options.beforeSubmit(self.$form);
 			self.$form.ajaxSubmit({
 				success: function (data, statusText, xhr) {
 					$instaInput.removeClass('ui-state-active ui-state-error');
@@ -60,7 +61,8 @@
 	$.InstaForm.defaultOptions = {
 		formClass: '',
 		selector: 'input:text, textarea',
-		success: function () { }
+    beforeSubmit: function($form){},
+		success: function (data, statusText, xhr, $form) { }
 	};
 
 	$.fn.instaform = function (options) {

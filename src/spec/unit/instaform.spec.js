@@ -46,13 +46,17 @@ describe 'InstaForm : '
 			before
 				// only works because we never get a success or error from the ajax request
 				// due to the action url on the instaform fixture. doh!
+        element_classes = ''
+        current_input.closest('form').instaform({
+          beforeSubmit:function(){	element_classes = current_input.attr('class')}})
 				current_input.val('magic mushroom').change()
 			end
 			
 			should_behave_like('all inputs have default state')
 			
+      // fails in Rhino b/c the ajax request succeeds, thus removing the ui-state-active class
 			it 'should be active'
-				current_input.should.have_class 'ui-state-active'
+        element_classes.should.include 'ui-state-active'
 			end
 			
 			it 'should be the only active input'
