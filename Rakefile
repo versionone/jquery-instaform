@@ -27,7 +27,7 @@ task :dist => [:clean] do
   end
 end
 
-desc "Run the specs headless via Rhino and Env.js"
+desc "*Default* Run the specs headless via Rhino and Env.js"
 task :spec => 'spec:rhino'
 
 namespace :spec do
